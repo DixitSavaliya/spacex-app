@@ -1,7 +1,7 @@
 ## Table Of Contents
 
 - [About-this-project](#About-this-project)
-    - [what is twitter-feed-app?](#what-is-SpaceX-App?)
+    - [what is SpaceX-app?](#what-is-SpaceX-App?)
 -   [Directory-Structure](#Directory-Structure)
 -    [Getting-Started](#Getting-Started)
 -    [Version-Control](#Version-Control)

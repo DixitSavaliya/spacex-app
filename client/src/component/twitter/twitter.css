@@ -124,6 +124,11 @@ hr {
     margin-top: 24px;
     overflow-x: unset !important;
 }
+.AllLaunches-root-252 {
+    width: 100%;
+    margin-top: 24px;
+    overflow-x: unset !important;
+}
 .img-twitter-logo:hover{
     opacity: 0.3;
     filter: grayscale(100%);

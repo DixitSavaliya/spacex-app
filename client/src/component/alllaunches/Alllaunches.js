@@ -89,7 +89,7 @@ class AllLaunches extends Component {
                                         <TableRow>
                                             <TableCell>{pastlaunches.mission_name}</TableCell>
                                             <TableCell align="center">{pastlaunches.rocket.rocket_name}</TableCell>
-                                            <TableCell align="center">{pastlaunches.launch_date_utc}</TableCell>
+                                            <TableCell align="center">{(new Date(pastlaunches.launch_date_utc)).toLocaleDateString()}</TableCell>
                                             <TableCell align="center">
                                                 <Fab variant="extended" aria-label="Delete" className={classes.fab}>
                                                     Success
