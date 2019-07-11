@@ -1,0 +1,83 @@
+/* .MuiCardMedia-root.UpcomingLaunches-media-95 {
+    background-image: url("../../images/rocket.jpg");
+} */
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+    padding: 15px 21px !important;
+}
+.MuiPaper-rounded {
+    border-radius: 0px !important;
+}
+.date_color{
+color: black;
+margin-left: 6px;
+}
+p.MuiTypography-root.MuiTypography-body2.MuiTypography-colorTextSecondary {
+    margin-top: 15px !important;
+}
+button.MuiButtonBase-root.MuiFab-root.UpcomingLaunches-margin-96.MuiFab-extended.MuiFab-primary.MuiFab-sizeSmall {
+    margin-left: -3px;
+    margin-top: 20px;
+    width: 100px;
+}
+.MuiFab-primary:hover {
+    background-color: #448aff !important;
+}
+.MuiFab-primary {
+    color: #fff;
+    background-color: #448aff !important;
+}
+.MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: #448aff !important;
+}
+button.MuiButtonBase-root.MuiButton-root.UpcomingLaunches-button-98.MuiButton-text {
+    float: right !important;
+}
+.MuiButton-root {
+    color: black !important;
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+}
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #38A1F3;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    animation: spin 2s linear infinite;
+    margin-top: 200px;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .username_title {
+    display: contents !important;
+}
+.MuiCard-root {
+    overflow: hidden;
+    margin-top: 15px !important;
+}
+.load{
+    background-image: url("../../assets/images/spac.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 350px;
+   }
