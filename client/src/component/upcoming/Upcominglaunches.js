@@ -14,7 +14,7 @@ import Fab from '@material-ui/core/Fab';
 import './Upcominglaunches.css';
 import Tooltip from '@material-ui/core/Tooltip';
 import API from '../../service/upcominglaunches.service';
-import unregister from '../../intersepter.js';
+import unregister from '../../intercept.js';
 
 const classes = theme => ({
     root: {
@@ -88,7 +88,7 @@ class UpcomingLaunches extends Component {
                                     this.state.UpcomingLaunches.slice(0, Math.floor(this.state.UpcomingLaunches.length / 2)).map(spacedata =>
                                         <Card className={classes.card}>
                                             <CardActionArea>
-                                                <div>
+                                                <div className="img_space">
                                                     <img src={require('../../images/rocket.jpg')} />
                                                 </div>
                                                 <CardContent>
@@ -136,7 +136,7 @@ class UpcomingLaunches extends Component {
                                     this.state.UpcomingLaunches.slice(Math.floor(this.state.UpcomingLaunches.length / 2)).map(spacedata =>
                                         <Card className={classes.card}>
                                             <CardActionArea>
-                                                <div>
+                                                <div  className="img_space">
                                                     <img src={require('../../images/rocket.jpg')} />
                                                 </div>
                                                 <CardContent>

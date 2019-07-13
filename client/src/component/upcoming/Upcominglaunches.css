@@ -1,6 +1,3 @@
-/* .MuiCardMedia-root.UpcomingLaunches-media-95 {
-    background-image: url("../../images/rocket.jpg");
-} */
 .MuiGrid-spacing-xs-3 > .MuiGrid-item {
     padding: 15px 21px !important;
 }
@@ -30,7 +27,16 @@ button.MuiButtonBase-root.MuiFab-root.UpcomingLaunches-margin-96.MuiFab-extended
     color: #fff;
     background-color: #448aff !important;
 }
-button.MuiButtonBase-root.MuiButton-root.UpcomingLaunches-button-98.MuiButton-text {
+.UpcomingLaunches-button-98 {
+    margin: 8px;
+    float: right !important;
+}
+.UpcomingLaunches-button-289 {
+    margin: 8px;
+    float: right !important;
+}
+.UpcomingLaunches-button-321 {
+    margin: 8px;
     float: right !important;
 }
 .MuiButton-root {
@@ -81,3 +87,11 @@ button.MuiButtonBase-root.MuiButton-root.UpcomingLaunches-button-98.MuiButton-te
     background-attachment: fixed;
     background-size: 350px;
    }
+   .img_space img{
+       max-width: 100%;
+       min-width: 100%;
+   }
+
+.MuiPaper-elevation1:hover {
+    box-shadow: 3px 4px 6px 1px rgba(0,0,0,0.2), 3px 4px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+}

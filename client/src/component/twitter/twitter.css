@@ -140,3 +140,12 @@ hr {
     background-attachment: fixed;
     background-size: 350px;
    }
+   button.load-more {
+    margin-top: 15px !important;
+    margin-left: 325px !important;
+}
+.date{
+    float: right;
+    color: gray;
+    font-size: 10px;
+}

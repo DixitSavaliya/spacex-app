@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import Fab from '@material-ui/core/Fab';
 import './alllaunches.css';
 import Swal from 'sweetalert2';
-import unregister from '../../intersepter.js';
+import unregister from '../../intercept.js';
 
 const classes = theme =>
     ({

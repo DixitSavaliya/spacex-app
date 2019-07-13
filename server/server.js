@@ -1,10 +1,8 @@
 /** App use this express framework , mongoose database */
-const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser')
-const config = require('./database.js');
 const ENV = require('dotenv');
 ENV.config();
 
@@ -23,12 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-/** Mongoose DataBase Connection */
-mongoose.Promise = global.Promise;
-mongoose.connect(config.DB, { useNewUrlParser: true }).then(
-  () => { console.log('Database is connected') },
-  err => { console.log('Can not connect to the database' + err) }
-);
+
 
 /** Router */
 
