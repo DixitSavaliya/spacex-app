@@ -46,10 +46,10 @@ class AllLaunches extends Component {
         /** Past Launches spacex */
         API.getPastLaunches()
             .then((findresponse) => {
-                    this.setState({
-                        PastLaunches: findresponse,
-                        isLoaded: true
-                    })
+                this.setState({
+                    PastLaunches: findresponse,
+                    isLoaded: true
+                })
                 console.log("past launches=======", this.state.PastLaunches);
             })
             .catch((err) => {
@@ -90,11 +90,19 @@ class AllLaunches extends Component {
                                             <TableCell>{pastlaunches.mission_name}</TableCell>
                                             <TableCell align="center">{pastlaunches.rocket.rocket_name}</TableCell>
                                             <TableCell align="center">{(new Date(pastlaunches.launch_date_utc)).toLocaleDateString()}</TableCell>
-                                            <TableCell align="center">
-                                                <Fab variant="extended" aria-label="Delete" className={classes.fab}>
-                                                    Success
-                                            </Fab>
-                                            </TableCell>
+                                            {
+                                                pastlaunches.launch_success == true ?
+                                                    (<TableCell align="center">
+                                                        <Fab variant="extended" aria-label="Delete" className={classes.fab}>
+                                                            Success
+                                             </Fab>
+                                                    </TableCell>) : (<TableCell align="center">
+                                                        <Fab variant="extended" aria-label="Delete" className={classes.fab}>
+                                                            Failure
+                                             </Fab>
+                                                    </TableCell>)
+                                            }
+
                                         </TableRow>
                                     )}
                             </TableBody>

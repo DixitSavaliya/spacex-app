@@ -14,7 +14,7 @@ const T = new Twit({
 
 /** SpaceX Twitter-tweets */
 tweetsRoutes.get('/twitter-tweets', tweetvalidation.tweets, (req, res) => {
-    T.get('/statuses/user_timeline.json?screen_name=SpaceX&count=6', function (err, response) {
+    T.get('/statuses/user_timeline.json?screen_name=SpaceX&count=15', function (err, response) {
         if (err) {
             console.log('err: ', err);
         } else {
@@ -25,7 +25,7 @@ tweetsRoutes.get('/twitter-tweets', tweetvalidation.tweets, (req, res) => {
 
 /** Elon Musk Twitter-tweets */
 tweetsRoutes.get('/twitter-tweet', tweetvalidation.tweets, (req, res) => {
-    T.get('/statuses/user_timeline.json?screen_name=ElonMusk&count=6', function (err, response) {
+    T.get('/statuses/user_timeline.json?screen_name=ElonMusk&count=15', function (err, response) {
         if (err) {
             console.log('err: ', err);
         } else {

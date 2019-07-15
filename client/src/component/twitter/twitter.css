@@ -134,15 +134,19 @@ hr {
     filter: grayscale(100%);
 }
 .load{
-    background-image: url("../../assets/images/spac.gif");
+    background-image: url("../../assets/images/l.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: 350px;
    }
-   button.load-more {
+button.load-more {
     margin-top: 15px !important;
-    margin-left: 325px !important;
+    margin-left: 190px !important;
+    border: 1px solid #00aced;
+}
+button.load-more:hover {
+background-color: #00aced !important;
 }
 .date{
     float: right;

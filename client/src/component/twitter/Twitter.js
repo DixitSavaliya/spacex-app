@@ -23,7 +23,7 @@ class Twitter extends Component {
             TwitterLaunches: [],
             TwitterMask: [],
             isLoaded: false,
-            visible: 3
+            visible: 8
         }
         this.loadMore = this.loadMore.bind(this);
     }
@@ -136,7 +136,7 @@ class Twitter extends Component {
                             <div className="scroll">
                                 <div>
                                     {
-                                        this.state.TwitterLaunches.map(tweet =>
+                                        this.state.TwitterLaunches.slice(0, this.state.visible).map(tweet =>
                                             <div key={tweet}>
                                                 <div key={tweet}>
                                                     <div className="tweet_class1">
@@ -177,9 +177,9 @@ class Twitter extends Component {
 
                                     }
                                     {this.state.TwitterLaunches ? <div>{this.state.visible < this.state.TwitterLaunches.length &&
-                                        <Button variant="outlined" color="primary" onClick={this.loadMore} type="button" className="load-more">
+                                        <Button size="large" variant="outlined" color="primary" onClick={this.loadMore} type="button" className="load-more">
                                             Load more
-                                         </Button>
+                                      </Button>
                                     }  </div> : <div>No data</div>}
                                 </div>
 
@@ -192,7 +192,7 @@ class Twitter extends Component {
                             <p className="retweet">Elon Mask tweeted</p>
                             <div className="scroll">
                                 {
-                                    this.state.TwitterMask.map(tweet =>
+                                    this.state.TwitterMask.slice(0, this.state.visible).map(tweet =>
                                         <div key={tweet}>
                                             <div key={tweet}>
                                                 <div className="tweet_class1">
@@ -229,6 +229,11 @@ class Twitter extends Component {
                                         </div>
                                     )
                                 }
+                                {this.state.TwitterMask ? <div>{this.state.visible < this.state.TwitterMask.length &&
+                                    <Button size="large" variant="outlined" color="primary" onClick={this.loadMore} type="button" className="load-more">
+                                        Load more
+                                   </Button>
+                                } </div> : <div>No data</div>}
                             </div>
                         </Grid>
                     </Grid>
