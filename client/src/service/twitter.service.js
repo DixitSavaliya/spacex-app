@@ -1,6 +1,5 @@
 import { config } from '../config.js';
 
-
 export default {
 
     /** Twitter Launches Spacex */
@@ -16,5 +15,4 @@ export default {
             .then(res => res.json())
             .catch({ status: 500, message: 'Internal Server Error' });
     }
-
 }

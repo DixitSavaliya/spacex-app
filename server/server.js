@@ -1,4 +1,4 @@
-/** App use this express framework , mongoose database */
+/** App use this express framework */
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -21,10 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-
-
 /** Router */
-
 const tweetsrouter = require('./route/tweets.route.js');
 
 /** Use Router */

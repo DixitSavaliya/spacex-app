@@ -25,7 +25,7 @@ tr:nth-child(even) {
 }
 .head{
     margin-left: 17px !important;
-    margin-top: 0px !important;
+    margin-top: 75px !important;
 }
 .MuiTableCell-root {
     display: table-cell;
@@ -55,13 +55,14 @@ tr.MuiTableRow-head th:hover {
     background-color: rgba(224, 224, 224, 1) !important;
 } */
 .load{
-    background-image: url("../../assets/images/l.gif");
+    background-image: url("../../assets/images/r2.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: 350px;
    }
-   .AllLaunches-root-433 {
+
+   .AllLaunches-root-405 {
     width: 100%;
     margin-top: 24px;
     overflow-x: unset !important;
@@ -93,4 +94,7 @@ tr.MuiTableRow-head th:hover {
     letter-spacing: 0.02857em;
     text-transform: uppercase;
     background-color: #e0e0e0;
+}
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignLeft {
+    padding: 20px !important;
 }

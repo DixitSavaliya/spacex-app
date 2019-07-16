@@ -4,3 +4,6 @@
 .PrivateTabIndicator-colorSecondary-62 {
     background-color: #fff !important;
 }
+.MuiAppBar-positionStatic {
+    position: fixed !important;
+}

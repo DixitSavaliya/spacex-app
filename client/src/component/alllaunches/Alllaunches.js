@@ -87,7 +87,8 @@ class AllLaunches extends Component {
                                 {
                                     this.state.PastLaunches.map(pastlaunches =>
                                         <TableRow>
-                                            <TableCell>{pastlaunches.mission_name}</TableCell>
+                                            <TableCell><a className="mdc-list-item trends-color top" target="_blank" href={pastlaunches.links.article_link} aria-current="page">
+                                                {pastlaunches.mission_name}</a></TableCell>
                                             <TableCell align="center">{pastlaunches.rocket.rocket_name}</TableCell>
                                             <TableCell align="center">{(new Date(pastlaunches.launch_date_utc)).toLocaleDateString()}</TableCell>
                                             {
@@ -95,14 +96,13 @@ class AllLaunches extends Component {
                                                     (<TableCell align="center">
                                                         <Fab variant="extended" aria-label="Delete" className={classes.fab}>
                                                             Success
-                                             </Fab>
+                                                        </Fab>
                                                     </TableCell>) : (<TableCell align="center">
                                                         <Fab variant="extended" aria-label="Delete" className={classes.fab}>
                                                             Failure
-                                             </Fab>
+                                                        </Fab>
                                                     </TableCell>)
                                             }
-
                                         </TableRow>
                                     )}
                             </TableBody>

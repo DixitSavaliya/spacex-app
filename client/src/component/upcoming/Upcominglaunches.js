@@ -23,7 +23,7 @@ const classes = theme => ({
     card: {
     },
     media: {
-        height: 352
+        height: 252
     },
     margin: {
         margin: theme.spacing(1),
@@ -96,14 +96,14 @@ class UpcomingLaunches extends Component {
                                                         {spacedata.rocket.rocket_name}<span>  - {spacedata.mission_name}</span>
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <i class="fas fa-map-marker-alt"></i> {spacedata.launch_site.site_name_long}
+                                                        <i className="fas fa-map-marker-alt"></i> {spacedata.launch_site.site_name_long}
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <i class="far fa-calendar-alt"></i>
+                                                        <i className="far fa-calendar-alt"></i>
                                                         <strong className="date_color">{spacedata.launch_date_utc} UTC</strong>
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <i class="fas fa-user"></i>  {spacedata.rocket.second_stage.payloads[0].customers[0]}
+                                                        <i className="fas fa-user"></i>  {spacedata.rocket.second_stage.payloads[0].customers[0]}
                                                     </Typography>
                                                     {
                                                         spacedata.rocket.first_stage.cores[0].core_serial ?
@@ -136,7 +136,7 @@ class UpcomingLaunches extends Component {
                                     this.state.UpcomingLaunches.slice(Math.floor(this.state.UpcomingLaunches.length / 2)).map(spacedata =>
                                         <Card className={classes.card}>
                                             <CardActionArea>
-                                                <div  className="img_space">
+                                                <div className="img_space">
                                                     <img src={require('../../images/rocket.jpg')} />
                                                 </div>
                                                 <CardContent>
@@ -144,14 +144,14 @@ class UpcomingLaunches extends Component {
                                                         {spacedata.rocket.rocket_name}<span>  - {spacedata.mission_name}</span>
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <i class="fas fa-map-marker-alt"></i> {spacedata.launch_site.site_name_long}
+                                                        <i className="fas fa-map-marker-alt"></i> {spacedata.launch_site.site_name_long}
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <i class="far fa-calendar-alt"></i>
+                                                        <i className="far fa-calendar-alt"></i>
                                                         <strong className="date_color">{spacedata.launch_date_utc} UTC</strong>
                                                     </Typography>
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <i class="fas fa-user"></i>  {spacedata.rocket.second_stage.payloads[0].customers[0]}
+                                                        <i className="fas fa-user"></i>  {spacedata.rocket.second_stage.payloads[0].customers[0]}
                                                     </Typography>
                                                     {
                                                         spacedata.rocket.first_stage.cores[0].core_serial ?
