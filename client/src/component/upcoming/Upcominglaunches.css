@@ -115,3 +115,10 @@ h2.launch {
 .reddit.MuiButton-text {
     float: right !important;
 }
+.MuiFab-label {
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    font-size: 12px !important;
+}

@@ -135,13 +135,13 @@ class Twitter extends Component {
                             <h2 className="heading">Tweets <span className="font_size">by</span><span><a className="mdc-list-item trends-color top" target="_blank" href="https://twitter.com/SpaceX" aria-current="page">
                                 <Tooltip title="@SpaceX On Twitter"><span className="font_size1"> @SpaceX</span></Tooltip>
                             </a></span><a className="mdc-list-item trends-color top" target="_blank" href="https://support.twitter.com/articles/20175256" aria-current="page">
-                                    <i class="fas fa-info-circle"></i></a></h2>
+                                    <i className="fas fa-info-circle"></i></a></h2>
                         </Grid>
                         <Grid item xl={6} md={6} sm={6} >
                             <h2 className="heading">Tweets <span className="font_size">by</span><span><a className="mdc-list-item trends-color top" target="_blank" href="https://twitter.com/SpaceX" aria-current="page">
                                 <Tooltip title="@elonmusk On Twitter"><span className="font_size1"> @elonmusk</span></Tooltip>
                             </a></span><a className="mdc-list-item trends-color top" target="_blank" href="https://support.twitter.com/articles/20175256" aria-current="page">
-                                    <i class="fas fa-info-circle"></i></a></h2>
+                                    <i className="fas fa-info-circle"></i></a></h2>
                         </Grid>
                     </Grid>
                     <hr />
