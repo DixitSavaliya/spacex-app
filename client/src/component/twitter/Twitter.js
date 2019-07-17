@@ -53,7 +53,14 @@ class Twitter extends Component {
         //             access_token_secret: "JNTJLubPvs7eW4oQhjo3zVtz0TgwVCx7wmv0cqTVjomrY"
         //         }
         //     }
-        // }).then(response => response.json())
+        // }).then(response =>  {
+        //     if (response) {
+        //         console.log("response=",response);
+        //       return response.json();
+        //     } else {
+        //       throw new Error('Something went wrong ...');
+        //     }
+        //   })
         //     .then(data => console.log("data====", data));
 
         /** spacex all tweets */
@@ -193,7 +200,7 @@ class Twitter extends Component {
                                             variant="extended"
                                             color="transparent"
                                             aria-label="Add"
-                                            className="load-more"
+                                            className="load-more-btn"
                                             onClick={this.loadMore}
                                         >
                                             Load more
@@ -261,7 +268,7 @@ class Twitter extends Component {
                                         variant="extended"
                                         color="transparent"
                                         aria-label="Add"
-                                        className="load-more"
+                                        className="load-more-btn"
                                         onClick={this.loadMoreButton}
                                     >
                                         Load more

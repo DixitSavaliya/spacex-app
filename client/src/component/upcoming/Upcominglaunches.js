@@ -78,7 +78,7 @@ class UpcomingLaunches extends Component {
         } else if (isLoaded) {
             return (
                 <div className={classes.root}>
-                    <h2>Upcoming Launches</h2>
+                    <h2 className="launch">Upcoming Launches</h2>
                     <div>
                         {/** SpaceX-Upcoming Launches Response Display */}
 
@@ -122,7 +122,7 @@ class UpcomingLaunches extends Component {
                                                             </div>) : ('')
                                                     }
                                                     <Typography variant="body2" color="textSecondary" component="p">
-                                                        <a className="mdc-list-item trends-color username_title" target="_blank" href={spacedata.links.reddit_campaign} aria-current="page"><Button className={classes.button}>REDDIT</Button></a>
+                                                        <a className="mdc-list-item trends-color username_title" target="_blank" href={spacedata.links.reddit_campaign} aria-current="page"><Button className="reddit">REDDIT</Button></a>
                                                     </Typography>
                                                 </CardContent>
                                             </CardActionArea>
@@ -170,7 +170,7 @@ class UpcomingLaunches extends Component {
                                                             </div>) : ('')
                                                     }
                                                     <div>
-                                                        <a className="mdc-list-item trends-color username_title" target="_blank" href={spacedata.links.reddit_campaign} aria-current="page"><Button className={classes.button}>REDDIT</Button></a>
+                                                        <a className="mdc-list-item trends-color username_title" target="_blank" href={spacedata.links.reddit_campaign} aria-current="page"><Button className="reddit">REDDIT</Button></a>
                                                     </div>
                                                 </CardContent>
                                             </CardActionArea>

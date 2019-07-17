@@ -79,7 +79,7 @@ class AllLaunches extends Component {
                                 <TableRow>
                                     <TableCell align="left">Payload</TableCell>
                                     <TableCell align="center">Rocket</TableCell>
-                                    <TableCell align="center">Date(UTC)</TableCell>
+                                    <TableCell align="center">Date</TableCell>
                                     <TableCell align="center">Success</TableCell>
                                 </TableRow>
                             </TableHead>

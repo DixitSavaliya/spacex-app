@@ -139,18 +139,29 @@ hr {
     background-position: center;
     background-attachment: fixed;
     background-size: 350px;
+    background-color: #448aff;
    }
 button.load-more {
-    margin-top: 15px !important;
+    margin-top: 13px !important;
     margin-left: 210px !important;
     border: 1px solid #00aced;
     width: 150px !important;
     color: #00aced !important;
+    font-size: 12px !important;
 }
 
-button.load-more:hover {
+button.load-more:hover, button.load-more-btn:hover {
 background-color: #00aced !important;
 color: #fff !important;
+}
+button.load-more-btn{
+    margin-top: 12px !important;
+    margin-left: 210px !important;
+    border: 1px solid #00aced;
+    width: 150px !important;
+    color: #00aced !important;
+    background-color: #fff;
+    font-size: 12px !important;
 }
 .date{
     float: right;
@@ -168,7 +179,7 @@ span.right {
     font-size: 12px;
     color: #00aced;
     margin-right: 16px;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 span.left {
     font-size: 12px;

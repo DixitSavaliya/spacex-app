@@ -86,6 +86,7 @@ button.MuiButtonBase-root.MuiFab-root.UpcomingLaunches-margin-96.MuiFab-extended
     background-position: center;
     background-attachment: fixed;
     background-size: 350px;
+    background-color: #448aff;
    }
    .img_space img{
        max-width: 100%;
@@ -99,4 +100,18 @@ button.MuiButtonBase-root.MuiFab-root.UpcomingLaunches-margin-96.MuiFab-extended
 .UpcomingLaunches-root-93 {
     flex-grow: 1;
     margin-top: 100px !important;
+}
+h2.launch {
+    margin-top: 100px !important;
+}
+.MuiFab-extended.MuiFab-sizeSmall {
+    width: 100px !important;
+    height: 34px;
+    padding: 0 8px;
+    min-width: 34px;
+    border-radius: 17px;
+    margin-top: 20px !important;
+}
+.reddit.MuiButton-text {
+    float: right !important;
 }
