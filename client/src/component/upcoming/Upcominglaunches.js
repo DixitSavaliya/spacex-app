@@ -4,7 +4,6 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
@@ -69,7 +68,7 @@ class UpcomingLaunches extends Component {
     render() {
         const { classes } = this.props;
         const { isLoaded } = this.state;
-        console.log("upcoming launches===",this.state.UpcomingLaunches);
+        console.log("upcoming launches===", this.state.UpcomingLaunches);
         if (!isLoaded) {
             return (
                 <center>
@@ -80,7 +79,7 @@ class UpcomingLaunches extends Component {
             return (
                 <div className={classes.root}>
                     <h2 className="launch">Upcoming Launches</h2>
-                    <div>
+                    <div className="header_card">
                         {/** SpaceX-Upcoming Launches Response Display */}
 
                         <Grid container spacing={3}>
@@ -157,7 +156,7 @@ class UpcomingLaunches extends Component {
                                                     {
                                                         spacedata.rocket.first_stage.cores[0].core_serial ?
                                                             (<div>
-                                                                 <Tooltip title={<div><span>"name":"{spacedata.mission_name}"</span> , <span>"flight":"{spacedata.flight_number}"</span></div>} aria-label="Add">
+                                                                <Tooltip title={<div><span>"name":"{spacedata.mission_name}"</span> , <span>"flight":"{spacedata.flight_number}"</span></div>} aria-label="Add">
                                                                     <Fab
                                                                         variant="extended"
                                                                         size="small"

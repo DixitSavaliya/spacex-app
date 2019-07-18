@@ -6,14 +6,12 @@ import { Player } from 'video-react';
 import Swal from 'sweetalert2';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fab from '@material-ui/core/Fab';
-import Button from '@material-ui/core/Button';
 import './twitter.css';
 import '../video.css';
 import unregister from '../../intercept.js';
-import Twitters from 'twitter';
 const Twit = require('twit');
 const axios = require('axios');
-// import const from '../../const.js';
+
 class Twitter extends Component {
 
     /** constructor call */
@@ -31,38 +29,6 @@ class Twitter extends Component {
 
     /** First this function call during component render */
     componentDidMount() {
-        // const T = new Twit({
-        //     consumer_key: "R97gl62wfPLJEtWCbIVf1xKxg",
-        //     consumer_secret: "tlvkOnbsX8KuL67mZSSrMsKyEIVls63iOhsu4L2SKJq2zL3ygK",
-        //     access_token: "1125979094783414272-pD2nKhVWhrEtMYaYEpmtKNIehe4Zeh",
-        //     access_token_secret: "JNTJLubPvs7eW4oQhjo3zVtz0TgwVCx7wmv0cqTVjomrY"
-        // }
-        // );
-        // console.log("T======", T);
-        // fetch('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=SpaceX&count=10', {
-        //     method: 'GET',
-        //     withCredentials: true,
-        //     headers: {
-        //         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        //         'Accept': 'application/json',
-        //         // 'Authorization': 'consumer_key="R97gl62wfPLJEtWCbIVf1xKxg",consumer_secret="tlvkOnbsX8KuL67mZSSrMsKyEIVls63iOhsu4L2SKJq2zL3ygK",access_token="1125979094783414272-pD2nKhVWhrEtMYaYEpmtKNIehe4Zeh",access_token_secret="JNTJLubPvs7eW4oQhjo3zVtz0TgwVCx7wmv0cqTVjomrY"'
-        //         'Authorization': {
-        //             consumer_key: "R97gl62wfPLJEtWCbIVf1xKxg",
-        //             consumer_secret: "tlvkOnbsX8KuL67mZSSrMsKyEIVls63iOhsu4L2SKJq2zL3ygK",
-        //             access_token: "1125979094783414272-pD2nKhVWhrEtMYaYEpmtKNIehe4Zeh",
-        //             access_token_secret: "JNTJLubPvs7eW4oQhjo3zVtz0TgwVCx7wmv0cqTVjomrY"
-        //         }
-        //     }
-        // }).then(response =>  {
-        //     if (response) {
-        //         console.log("response=",response);
-        //       return response.json();
-        //     } else {
-        //       throw new Error('Something went wrong ...');
-        //     }
-        //   })
-        //     .then(data => console.log("data====", data));
-
         /** spacex all tweets */
         API.getTwitterLaunches()
             .then((data) => {
@@ -152,61 +118,59 @@ class Twitter extends Component {
                             <i class="fas fa-retweet"></i>
                             <p className="retweet">SpaceX tweeted</p>
                             <div className="scroll">
-                                <div>
-                                    {
-                                        this.state.TwitterLaunches.slice(0, this.state.visible).map(tweet =>
+                                {
+                                    this.state.TwitterLaunches.slice(0, this.state.visible).map(tweet =>
+                                        <div key={tweet}>
                                             <div key={tweet}>
-                                                <div key={tweet}>
-                                                    <div className="tweet_class1">
-                                                        <Grid container spacing={1}>
-                                                            <Grid item sm={2}>
-                                                                <div className="profile_image_post">
-                                                                    <a className="mdc-list-item trends-color top" target="_blank" href={"http://twitter.com/" + tweet.user.screen_name} aria-current="page">
-                                                                        <img src={tweet.user.profile_image_url} /></a>
-                                                                </div>
-                                                            </Grid>
-                                                            <Grid item sm={10}>
-                                                                <img className="img-twitter-logo" src={require('../../assets/images/feed.png')} />
-                                                                <a className="mdc-list-item trends-color username_title" target="_blank" href={"http://twitter.com/" + tweet.user.screen_name} aria-current="page">
-                                                                    <Tooltip title={tweet.user.name} aria-label="Add">
-                                                                        <span className="username_title"> {tweet.user.name}</span>
-                                                                    </Tooltip>
-                                                                </a>
-                                                                <a className="mdc-list-item trends-color" target="_blank" href={"http://twitter.com/" + tweet.user.screen_name} aria-current="page">
-                                                                    <Tooltip title={tweet.user.name} aria-label="Add">
-                                                                        <span className="gray">@{tweet.user.screen_name}</span>
-                                                                    </Tooltip>
-                                                                </a>
-                                                                <p><span>{tweet.text}</span></p>
-                                                                {(tweet.extended_entities) ?
-                                                                    (<div className="video">
-                                                                        {tweet.extended_entities ? (<a className="mdc-list-item trends-color top" target="_blank" href={tweet.extended_entities.media[0].url} aria-current="page">
-                                                                            <img className="video_height" src={tweet.extended_entities.media[0].media_url} /></a>) : ('')}
-                                                                    </div>) : ('')}
-                                                                <div className="date">
-                                                                    <p>{(new Date(tweet.created_at)).toLocaleDateString()}</p>
-                                                                </div>
-                                                            </Grid>
-
+                                                <div className="tweet_class1">
+                                                    <Grid container spacing={1}>
+                                                        <Grid item sm={2}>
+                                                            <div className="profile_image_post">
+                                                                <a className="mdc-list-item trends-color top" target="_blank" href={"http://twitter.com/" + tweet.user.screen_name} aria-current="page">
+                                                                    <img src={tweet.user.profile_image_url} /></a>
+                                                            </div>
                                                         </Grid>
-                                                    </div>
+                                                        <Grid item sm={10}>
+                                                            <img className="img-twitter-logo" src={require('../../assets/images/feed.png')} />
+                                                            <a className="mdc-list-item trends-color username_title" target="_blank" href={"http://twitter.com/" + tweet.user.screen_name} aria-current="page">
+                                                                <Tooltip title={tweet.user.name} aria-label="Add">
+                                                                    <span className="username_title"> {tweet.user.name}</span>
+                                                                </Tooltip>
+                                                            </a>
+                                                            <a className="mdc-list-item trends-color" target="_blank" href={"http://twitter.com/" + tweet.user.screen_name} aria-current="page">
+                                                                <Tooltip title={tweet.user.name} aria-label="Add">
+                                                                    <span className="gray">@{tweet.user.screen_name}</span>
+                                                                </Tooltip>
+                                                            </a>
+                                                            <p><span>{tweet.text}</span></p>
+                                                            {(tweet.extended_entities) ?
+                                                                (<div className="video">
+                                                                    {tweet.extended_entities ? (<a className="mdc-list-item trends-color top" target="_blank" href={tweet.extended_entities.media[0].url} aria-current="page">
+                                                                        <img className="video_height" src={tweet.extended_entities.media[0].media_url} /></a>) : ('')}
+                                                                </div>) : ('')}
+                                                            <div className="date">
+                                                                <p>{(new Date(tweet.created_at)).toLocaleDateString()}</p>
+                                                            </div>
+                                                        </Grid>
+
+                                                    </Grid>
                                                 </div>
                                             </div>
-                                        )
-                                    }
-                                    {/** If tweets more then 8 click on load more button & see more tweets */}
-                                    {this.state.TwitterLaunches ? <div>{this.state.visible < this.state.TwitterLaunches.length &&
-                                        <Fab
-                                            variant="extended"
-                                            color="transparent"
-                                            aria-label="Add"
-                                            className="load-more-btn"
-                                            onClick={this.loadMore}
-                                        >
-                                            Load more
+                                        </div>
+                                    )
+                                }
+                                {/** If tweets more then 8 click on load more button & see more tweets */}
+                                {this.state.TwitterLaunches ? <div>{this.state.visible < this.state.TwitterLaunches.length &&
+                                    <Fab
+                                        variant="extended"
+                                        color="transparent"
+                                        aria-label="Add"
+                                        className="load-more-btn"
+                                        onClick={this.loadMore}
+                                    >
+                                        Load more
                                       </Fab>
-                                    }  </div> : <div>No data</div>}
-                                </div>
+                                }  </div> : <div>No data</div>}
                             </div>
                             <hr />
                             <div>

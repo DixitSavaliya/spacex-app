@@ -122,3 +122,6 @@ h2.launch {
     justify-content: inherit;
     font-size: 12px !important;
 }
+.header_card{
+    margin-top: -38px;
+}
