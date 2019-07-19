@@ -68,7 +68,7 @@ class UpcomingLaunches extends Component {
     render() {
         const { classes } = this.props;
         const { isLoaded } = this.state;
-        console.log("upcoming launches===", this.state.UpcomingLaunches);
+        // console.log("upcoming launches===", this.state.UpcomingLaunches);
         if (!isLoaded) {
             return (
                 <center>

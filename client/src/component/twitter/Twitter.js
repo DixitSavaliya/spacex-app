@@ -41,7 +41,7 @@ class Twitter extends Component {
                         isLoaded: true
                     })
                 }
-                console.log("twitter launches====", this.state.TwitterLaunches);
+                // console.log("twitter launches====", this.state.TwitterLaunches);
             })
             .catch((err) => {
                 Swal.fire('Tweets Not Found....');
@@ -60,7 +60,7 @@ class Twitter extends Component {
                         isLoaded: true
                     })
                 }
-                console.log("twitter mask====", this.state.TwitterMask);
+                // console.log("twitter mask====", this.state.TwitterMask);
             })
             .catch((err) => {
                 Swal.fire('Tweets Not Found....');
