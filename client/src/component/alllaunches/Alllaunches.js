@@ -12,9 +12,9 @@ import Paper from '@material-ui/core/Paper';
 import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import './alllaunches.css';
-import Swal from 'sweetalert2';
 import unregister from '../../intercept.js';
 
+/** Style */
 const classes = theme =>
     ({
         root: {
@@ -30,6 +30,7 @@ const classes = theme =>
         }
     });
 
+/** AllLaunches Component  */
 class AllLaunches extends Component {
 
     /** constructor call */
@@ -43,7 +44,6 @@ class AllLaunches extends Component {
 
     /** First this function call during component render */
     componentDidMount() {
-
         /** Past Launches spacex */
         API.getPastLaunches()
             .then((findresponse) => {
@@ -51,12 +51,8 @@ class AllLaunches extends Component {
                     PastLaunches: findresponse,
                     isLoaded: true
                 })
-                // console.log("past launches=======", this.state.PastLaunches);
             })
-            .catch((err) => {
-                Swal.fire('Pastlaunches Not Found....');
-                console.log({ status: 500, message: 'Internal Server Error', err });
-            })
+            .catch({ status: 500, message: 'Internal Server Error' });
     }
 
     /** Render-app */

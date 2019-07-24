@@ -33,13 +33,11 @@ const useStyles = makeStyles(theme => ({
 export default function SimpleTabs() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
-
     function handleChange(event, newValue) {
         setValue(newValue);
     }
 
     return (
-
         /** Appbar of SpaceX-APP */
         <div className={classes.root}>
             <AppBar position="static">

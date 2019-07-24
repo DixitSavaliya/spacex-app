@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import "material-components-web/dist/material-components-web.min.css";
 import Grid from '@material-ui/core/Grid';
 import API from '../../service/twitter.service.js';
-import { Player } from 'video-react';
 import Swal from 'sweetalert2';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fab from '@material-ui/core/Fab';
 import './twitter.css';
 import '../video.css';
 import unregister from '../../intercept.js';
-const Twit = require('twit');
-const axios = require('axios');
 
+/** Twitter Component */
 class Twitter extends Component {
 
     /** constructor call */
@@ -41,12 +39,8 @@ class Twitter extends Component {
                         isLoaded: true
                     })
                 }
-                // console.log("twitter launches====", this.state.TwitterLaunches);
             })
-            .catch((err) => {
-                Swal.fire('Tweets Not Found....');
-                console.log({ status: 500, message: 'Internal Server Error', err });
-            })
+            .catch({ status: 500, message: 'Internal Server Error' });
 
         /** Elon Mask all tweets */
         API.getTwittersLaunches()
@@ -60,12 +54,8 @@ class Twitter extends Component {
                         isLoaded: true
                     })
                 }
-                // console.log("twitter mask====", this.state.TwitterMask);
             })
-            .catch((err) => {
-                Swal.fire('Tweets Not Found....');
-                console.log({ status: 500, message: 'Internal Server Error', err });
-            })
+            .catch({ status: 500, message: 'Internal Server Error' });
     }
 
     /** SpaceX load more tweets */
@@ -94,7 +84,6 @@ class Twitter extends Component {
         } else if (isLoaded) {
             return (
                 <div className="main_tweets">
-
                     {/** Header Content */}
                     <Grid container spacing={12}>
                         <Grid item xl={6} md={6} sm={6} >

@@ -15,6 +15,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import API from '../../service/upcominglaunches.service';
 import unregister from '../../intercept.js';
 
+/** Style */
 const classes = theme => ({
     root: {
         flexGrow: 1,
@@ -35,6 +36,7 @@ const classes = theme => ({
     },
 });
 
+/** UpcomingLaunches Component */
 class UpcomingLaunches extends Component {
 
     /** constructor call */
@@ -49,7 +51,6 @@ class UpcomingLaunches extends Component {
 
     /** First this function call during component run */
     componentDidMount() {
-
         /**Upcoming Launches Spacex */
         API.getLaunches()
             .then((findresponse) => {
@@ -58,10 +59,7 @@ class UpcomingLaunches extends Component {
                     isLoaded: true
                 })
             })
-            .catch((err) => {
-                Swal.fire('Upcominglaunches Not Found....');
-                console.log({ status: 500, message: 'Internal Server Error', err });
-            })
+            .catch({ status: 500, message: 'Internal Server Error' });
     }
 
     /** Render-app */
@@ -81,7 +79,6 @@ class UpcomingLaunches extends Component {
                     <h2 className="launch">Upcoming Launches</h2>
                     <div className="header_card">
                         {/** SpaceX-Upcoming Launches Response Display */}
-
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={6}>
                                 {
